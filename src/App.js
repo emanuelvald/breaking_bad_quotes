@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import Quote from "./components/Quote";
 
@@ -42,6 +42,10 @@ function App() {
 
     setBreakingBadQuote(quote[0]);
   };
+
+  useEffect(() => {
+    handleClickQuotes();
+  }, []);
 
   return (
     <Container>
